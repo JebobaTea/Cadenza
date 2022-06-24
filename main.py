@@ -1,5 +1,4 @@
 import discord
-import os
 import time
 import urllib
 import re
@@ -64,14 +63,14 @@ async def skip(ctx):
 
 @bot.command()
 async def play(ctx, *, arg):
-    if ctx.message.author.voice == None:
+    if ctx.message.author.voice is None:
         embed = discord.Embed(title="Error", description="You aren't in a VC!", color=discord.Color.red())
         await ctx.send(embed=embed)
     else:
         channel = ctx.message.author.voice.channel
         voice = discord.utils.get(ctx.guild.voice_channels, name=channel.name)
         voice_client = discord.utils.get(bot.voice_clients, guild=ctx.guild)
-        if voice_client == None:
+        if voice_client is None:
             voice_client = await voice.connect()
         else:
             await voice_client.move_to(channel)
