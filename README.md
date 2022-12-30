@@ -1,6 +1,10 @@
 # Cadenza
 Simple discord music bot using youtube-dl.
 
+Currently a WIP:
+
+--> 🔨 Use slash commands instead of reading message contents
+
 ## Commands
 ### ca!help
 View a list of all commands, and what they do.
