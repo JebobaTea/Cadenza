@@ -1,5 +1,5 @@
 # Cadenza
-Simple Discord Music Bot
+Simple discord music bot using youtube-dl
 
 ## Commands
 ### ca!help
